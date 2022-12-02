@@ -1,8 +1,8 @@
 <p align=center><img src=https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png><p>
 
-# **PROYECTO INDIVIDUAL Nº1**
+# <h1 align=center> **PROYECTO INDIVIDUAL Nº1** </h1>
 
-# <h1 align="center">**`Data Engineering`**</h1>
+# <h1 align=center>**`Data Engineering`**</h1>
 
 <p align="center">
 <img src="https://files.realpython.com/media/What-is-Data-Engineering_Watermarked.607e761a3c0e.jpg"  height=300>
