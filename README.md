@@ -130,7 +130,9 @@ Mogenius Deployment
 
 ## **Fuente de datos**
 
-+ Podrán encontrar los archivos con datos en la carpeta Datasets, en este mismo repositorio.
++ Podrán encontrar los archivos con datos en la carpeta Datasets, en este mismo repositorio.*
+
+>! <sub> *`Si quieren practicar un poco más, pueden investigar sobre la librería REQUESTS para descargar archivos desde links. Otra alternativa es usar el manejo nativo de Pandas para leer archivos directamente desde links`
 
 ## **Deadline**
 
