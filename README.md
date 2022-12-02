@@ -54,8 +54,8 @@ Las consultas a realizar son:
 
 7. **PLUS**: realizar un deployment en Mogenius 
 
-
-<img src = 'https://i.postimg.cc/2SwvnTcw/Sin-t-tulo.png' height = 400>
+<p align=center>
+<img src = 'https://i.postimg.cc/2SwvnTcw/Sin-t-tulo.png' height = 400></p>
 
 ## **Criterios de evaluación**
 
@@ -138,5 +138,5 @@ Mogenius Deployment
 
 Se les disponibilizará un form por el canal de Slack, para que carguen sus links del repositorio de GitHub y del video. La fecha límite es el día **viernes 9 de diciembre a las 12:00 GMT-3**.  
 
-
-<img src = 'https://cdn.memegenerator.es/imagenes/memes/full/0/90/902781.jpg' height = 300>
+<p align=center>
+<img src = 'https://cdn.memegenerator.es/imagenes/memes/full/0/90/902781.jpg' height = 300></p>
