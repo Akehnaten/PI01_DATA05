@@ -2,13 +2,15 @@
 
 # **PROYECTO INDIVIDUAL Nº1**
 
-# <h1 align="center">**`Data Engineer`**</h1>
+# <h1 align="center">**`Data Engineering`**</h1>
 
 <p align="center">
 <img src="https://files.realpython.com/media/What-is-Data-Engineering_Watermarked.607e761a3c0e.jpg"  height=300>
 </p>
 
-¡Bienvenidos al primer proyecto individual de la etapa de labs! En esta ocasión, deberán hacer un trabajo situándose en el rol de un ***Data Engineering***.
+¡Bienvenidos al primer proyecto individual de la etapa de labs! En esta ocasión, deberán hacer un trabajo situándose en el rol de un ***Data Engineer***.  
+
+<hr>  
 
 ## **Introducción**
 
@@ -55,6 +57,29 @@ Las consultas a realizar son:
 
 <img src = 'https://i.postimg.cc/2SwvnTcw/Sin-t-tulo.png' height = 400>
 
+## **Criterios de evaluación**
+
+**`Código`**:
+
++ Prolijidad de código 
+
++ Uso de clases y/o funciones, en caso de ser necesario
+
++ Código comentado
+
+**`Repositorio`**:
+
++ Nombres de archivo adecuados
+
++ Uso de carpetas para ordenar los archivos
+
++ README.md presentando el proyecto y el trabajo realizado
+
+**`Cumplimiento de consigna`**:
+
++ Ejecución de consultas a la API
++ Opcional: cumplimiento de plus
+
 ## **Video demostrativo**
 
 Tendrán que realizar un video presentando su trabajo y ejecutando las tareas solicitadas. **No deberá superar los 5 minutos**. Debe incluir una breve presentación personal, del proyecto, ejecución de código y tareas solicitadas.
@@ -100,10 +125,16 @@ Imagen Docker con Uvicorn/Guinicorn para aplicaciones web de alta performance:
 
 Mogenius Deployment
 
-+ https://mogenius.com/home
++ https://mogenius.com/home  
+
 
 ## **Fuente de datos**
 
-+ https://github.com/GonzaloPosse/netflix_test
++ Podrán encontrar los archivos con datos en la carpeta Datasets, en este mismo repositorio.
+
+## **Deadline**
+
+Se les disponibilizará un form por el canal de Slack, para que carguen sus links del repositorio de GitHub y del video. La fecha límite es el día **viernes 9 de diciembre a las 12:00 GMT-3**.  
+
 
 <img src = 'https://cdn.memegenerator.es/imagenes/memes/full/0/90/902781.jpg' height = 300>
