@@ -127,6 +127,10 @@ Mogenius Deployment
 
 + https://mogenius.com/home  
 
+FAST API Documentation:
+
++ https://fastapi.tiangolo.com/tutorial/
+
 
 ## **Fuente de datos**
 
@@ -136,7 +140,8 @@ Mogenius Deployment
 
 ## **Deadline**
 
-Se les disponibilizará un form por el canal de Slack, para que carguen sus links del repositorio de GitHub y del video. La fecha límite es el día **viernes 9 de diciembre a las 12:00 GMT-3**.  
-
+Se les disponibilizará a su debido tiempo, un form por el canal de Slack para que carguen sus links del repositorio de GitHub.  
+La fecha límite para la entrega es el día **viernes 9 de diciembre a las 12:00 GMT-3**.   
+  
 <p align=center>
 <img src = 'https://cdn.memegenerator.es/imagenes/memes/full/0/90/902781.jpg' height = 300></p>
