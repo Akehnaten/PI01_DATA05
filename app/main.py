@@ -1,27 +1,37 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from dataframe import amazon_prime, disney_plus, hulu, netflix
 
 app = FastAPI()
 
-@app.get("/")
+@app.get('/', response_class=HTMLResponse)
 async def mensaje():
 
-        bienvenida = """
-        Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:<br>
-        • Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:<br>
-        /get_max_duration(año, plataforma, [min/season según corresponda película/serie])<br>
-        ** IMPORTANTE ** ¡usar espacio luego de cada coma!<br>
+        bienvenida = """<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Science - PI laboratorio número 1</title>
+</head>
+<body>  
+        <BODY BGCOLOR="#000000" FGCOLOR="#00FF00" TEXT="#F0F0F0" LINK="#FFFF00" VLINK="22AA22" ALINK="#0077FF">
+        <h1><B><FONT COLOR="red"><center>Data Science - PI laboratorio número 1 </center></FONT></h1>
+        <h2>Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:</h2>
+        <p>• Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:</p>
+        <h3><FONT COLOR="blue">/get_max_duration(año, plataforma, [min/season según corresponda película/serie])</FONT></h3>
+        <h3>** IMPORTANTE ** ¡usar espacio luego de cada coma!</h2>
         <br>
-        • Para averiguar la cantidad de películas/series a disposición en cada plataforma:<br>
-        /get_count_plataform(plataforma)<br>
+        <p>• Para averiguar la cantidad de películas/series a disposición en cada plataforma:</p>
+        <h3><FONT COLOR="blue">/get_count_plataform(plataforma)</FONT></h3>
         <br>
-        • Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:<br>
-        /get_listedin(genero)<br>
-        ** IMPORTANTE ** recuerde que dentro de netflix el género comedia se encuentra como Comedies<br>
+        <p>• Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:</p>
+        <h3><FONT COLOR="blue">/get_listedin(genero)</FONT><h/3>
+        <h3>** IMPORTANTE ** recuerde que dentro de netflix el género comedia se encuentra como Comedies</h3>
         <br>
-        • Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:<br>
-        /get_actor(plataforma, año)<br>
-        ** IMPORTANTE ** ¡usar espacio luego de cada coma!<br>
+        <p>• Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:</p>
+        <h3><FONT COLOR="blue">/get_actor(plataforma, año)</FONT></h3>
+        <h3>** IMPORTANTE ** ¡usar espacio luego de cada coma!</h3>
         """
         return bienvenida
 
