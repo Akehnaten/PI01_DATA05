@@ -7,21 +7,21 @@ app = FastAPI()
 async def mensaje():
 
         bienvenida = """
-        Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:
-        • Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:
-        /get_max_duration(año, plataforma, [min/season según corresponda película/serie])
-        ** IMPORTANTE ** ¡usar espacio luego de cada coma!
-
-        • Para averiguar la cantidad de películas/series a disposición en cada plataforma:
-        /get_count_plataform(plataforma)
-
-        • Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:
-        /get_listedin(genero)
-        ** IMPORTANTE ** recuerde que dentro de netflix el género comedia se encuentra como Comedies
-
-        • Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:
-        /get_actor(plataforma, año)
-        ** IMPORTANTE ** ¡usar espacio luego de cada coma!
+        Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:<br>
+        • Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:<br>
+        /get_max_duration(año, plataforma, [min/season según corresponda película/serie])<br>
+        ** IMPORTANTE ** ¡usar espacio luego de cada coma!<br>
+        <br>
+        • Para averiguar la cantidad de películas/series a disposición en cada plataforma:<br>
+        /get_count_plataform(plataforma)<br>
+        <br>
+        • Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:<br>
+        /get_listedin(genero)<br>
+        ** IMPORTANTE ** recuerde que dentro de netflix el género comedia se encuentra como Comedies<br>
+        <br>
+        • Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:<br>
+        /get_actor(plataforma, año)<br>
+        ** IMPORTANTE ** ¡usar espacio luego de cada coma!<br>
         """
         return bienvenida
 
