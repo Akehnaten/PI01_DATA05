@@ -4,10 +4,28 @@ from dataframe import amazon_prime, disney_plus, hulu, netflix
 app = FastAPI()
 
 @app.get("/")
-async def index():
-        return {"Hola bb":"dame dinero"}
+async def mensaje():
 
-@app.get("/get_max_duration({anio},{plataforma},{tipo})")
+        bienvenida = """
+        Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:
+        • Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:
+        /get_max_duration(año, plataforma, [min/season según corresponda película/serie])
+        ** IMPORTANTE ** ¡usar espacio luego de cada coma!
+
+        • Para averiguar la cantidad de películas/series a disposición en cada plataforma:
+        /get_count_plataform(plataforma)
+
+        • Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:
+        /get_listedin(genero)
+        ** IMPORTANTE ** recuerde que dentro de netflix el género comedia se encuentra como Comedies
+
+        • Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:
+        /get_actor(plataforma, año)
+        ** IMPORTANTE ** ¡usar espacio luego de cada coma!
+        """
+        return bienvenida
+
+@app.get("/get_max_duration({anio}, {plataforma}, {tipo})")
 async def duracion(anio:int, plataforma:str, tipo:str):
         
         # Normalizo las variables por se se ingresó en mayúscula
@@ -62,7 +80,7 @@ async def inventario(plataforma:str):
 
 
 @app.get("/get_listedin({genero})")
-async def generos( genero:str ):
+async def generos(genero:str):
 
         # Normalizo las variables por se se ingresó en mayúscula
         genero = genero.lower().strip()
@@ -93,8 +111,8 @@ async def generos( genero:str ):
         return f"El género {genero} se repite unas {total} veces. La plataforma {mayor_frecuencia} es donde se presentan con mas frecuencia ({max_repeticiones} veces)"
 
 
-@app.get("/get_actor({plataforma},{anio})")
-async def generos( plataforma:str, anio: int ):
+@app.get("/get_actor({plataforma}, {anio})")
+async def generos(plataforma:str, anio:int):
 
         # Normalizo las variables por se se ingresó en mayúscula
         plataforma = plataforma.lower().strip()
