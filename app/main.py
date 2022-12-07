@@ -15,19 +15,19 @@ async def mensaje():
         <title>Data Science - PI laboratorio número 1</title>
         <script type="text/javascript">
                 function max_duration(){
-                        url = 'http://127.0.0.1:8000/get_max_duration(' + document.getElementById("anio").value + ', ' + document.getElementById("plataforma").value + ', ' + document.getElementById("unidad").value + ')'
+                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_max_duration(' + document.getElementById("anio").value + ', ' + document.getElementById("plataforma").value + ', ' + document.getElementById("unidad").value + ')'
                 window.open(url, '_blank');}
 
                 function count_plataform(){
-                        url = 'http://127.0.0.1:8000/get_count_plataform(' + document.getElementById("plataforma2").value + ')'
+                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_count_plataform(' + document.getElementById("plataforma2").value + ')'
                 window.open(url, '_blank');}
 
                 function listedin(){
-                        url = 'http://127.0.0.1:8000/get_listedin(' + document.getElementById("genero").value + ')'
+                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_listedin(' + document.getElementById("genero").value + ')'
                 window.open(url, '_blank');}
 
                 function actor(){
-                        url = 'http://127.0.0.1:8000/get_actor(' + document.getElementById("plataforma4").value + ', ' + document.getElementById("anio4").value + ')'
+                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_actor(' + document.getElementById("plataforma4").value + ', ' + document.getElementById("anio4").value + ')'
                 window.open(url, '_blank');}
         </script>
 
