@@ -65,7 +65,7 @@ async def mensaje():
         <br>
         <br>
         
-        <p>Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:</p>
+        <p>Bienvenido a mi proyecto individual, soy Ronal Cabrera y aquí te enseñaré a navegar dentro del sitio:</p>
         <br>
         <p>• Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:</p>
         <form>
