@@ -15,20 +15,22 @@ async def mensaje():
         <title>Data Science - PI laboratorio número 1</title>
 </head>
 <body>  
-        <BODY BGCOLOR="#93B874" FGCOLOR="#00FF00" TEXT="#000000" LINK="#FFFF00" VLINK="22AA22" ALINK="#0077FF">
-        <h1><B><FONT COLOR="red"><center>Data Science - PI laboratorio número 1 </center></FONT></h1>
-        <h2>Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:</h2>
+        <BODY BGCOLOR="#0F92A9" FGCOLOR="#00FF00" TEXT="#000000" LINK="#FFFF00" VLINK="22AA22" ALINK="#0077FF">
+        <h1><B><FONT COLOR="black"><center>Data Science - PI laboratorio número 1 </center></FONT></h1>
+        <br>
+        <br>
+        <p>Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:</p>
         <p>• Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:</p>
         <h3><FONT COLOR="blue">/get_max_duration(año, plataforma, [min/season según corresponda película/serie])</FONT></h3>
-        <h3>** IMPORTANTE ** ¡usar espacio luego de cada coma!</h2>
-        <br>
+        <h3>** IMPORTANTE ** ¡usar espacio luego de cada coma!</h3>
+       
         <p>• Para averiguar la cantidad de películas/series a disposición en cada plataforma:</p>
         <h3><FONT COLOR="blue">/get_count_plataform(plataforma)</FONT></h3>
-        <br>
+       
         <p>• Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:</p>
-        <h3><FONT COLOR="blue">/get_listedin(genero)</FONT><h/3>
+        <h3><FONT COLOR="blue">/get_listedin(genero)</FONT></h3>
         <h3>** IMPORTANTE ** recuerde que dentro de netflix el género comedia se encuentra como Comedies</h3>
-        <br>
+     
         <p>• Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:</p>
         <h3><FONT COLOR="blue">/get_actor(plataforma, año)</FONT></h3>
         <h3>** IMPORTANTE ** ¡usar espacio luego de cada coma!</h3>
