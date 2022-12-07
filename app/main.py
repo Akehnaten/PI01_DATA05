@@ -15,32 +15,45 @@ async def mensaje():
         <title>Data Science - PI laboratorio número 1</title>
         <style>
         body {  background-color: #22272e;
-                font-family: verdana;}
+                font-family: verdana;
+                font-size: 75%;}
         h1   {  color: #cdd9e5;
                 font-family: verdana;
-                font-size: 250%}
+                font-size: 250%;}
         h3   {  color: #539bf5;
-                font-family: verdana;}
+                font-family: verdana;
+                font-size: 100%;}
         p    {  color: #cdd9e5;
-                font-family: verdana;}
+                font-family: verdana;
+                font-size: 100%;}
         </style>
 </head>
 <body>  
         <h1><center>Data Science - PI laboratorio número 1 </center></h1>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <p>Bienvenido a mi proyecto individual, mi nombre es ronal cabrera y aquí te enseñaré a navegar dentro del sitio:</p>
         <p>• Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:</p>
         <h3>/get_max_duration(año, plataforma, [min/season según corresponda película/serie])</h3>
         <h3> IMPORTANTE ¡usar espacio luego de cada coma!</h3>
-       
+        <br>
+        <br>
+        <br>
         <p>• Para averiguar la cantidad de películas/series a disposición en cada plataforma:</p>
         <h3>/get_count_plataform(plataforma)</h3>
-       
+        <br>
+        <br>
+        <br>
         <p>• Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:</p>
         <h3>/get_listedin(genero)</h3>
         <h3>IMPORTANTE recuerde que dentro de netflix el género comedia se encuentra como Comedies</h3>
-     
+        <br>
+        <br>
+        <br>
         <p>• Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:</p>
         <h3>/get_actor(plataforma, año)</h3>
         <h3>IMPORTANTE ¡usar espacio luego de cada coma!</h3>
