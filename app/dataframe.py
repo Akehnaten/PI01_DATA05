@@ -31,6 +31,12 @@ disney_plus = disney_plus.set_index('show_id')
 
 hulu['show_id'] = hulu['show_id'] .replace({'s':''}, regex=True)
 hulu['duration'] = hulu['duration'] .replace({'[a-zA-Z ]':''}, regex=True)
+# -------------------------------- Muevo los datos a la columna correcta ---------------------------------
+aux = hulu[(hulu['rating'].str.contains(' min')) | (hulu['rating'].str.contains('eason'))].index.tolist()
+for i in range(len(aux)):
+    hulu.iloc[aux[i]-1,8] = hulu.iloc[aux[i]-1,7]
+    hulu.iloc[aux[i]-1,7] = 'Sin datos'
+# ---------------------------------------------------------------------------------------------------------    
 hulu['duration'] = hulu['duration'] .fillna(0)
 hulu['duration'] = hulu['duration'].astype('int64')
 hulu['show_id'] = hulu['show_id'].astype('int64')
@@ -38,6 +44,12 @@ hulu = hulu.set_index('show_id')
 
 netflix['show_id'] = netflix['show_id'] .replace({'s':''}, regex=True)
 netflix['duration'] = netflix['duration'] .replace({'[a-zA-Z ]':''}, regex=True)
+# -------------------------------- Muevo los datos a la columna correcta ---------------------------------
+aux = netflix[(netflix['rating'].str.contains(' min')) | (netflix['rating'].str.contains('eason'))].index.tolist()
+for i in range(len(aux)):
+    netflix.iloc[aux[i]-1,8] = netflix.iloc[aux[i]-1,7]
+    netflix.iloc[aux[i]-1,7] = 'Sin datos'
+# ---------------------------------------------------------------------------------------------------------  
 netflix['duration'] = netflix['duration'] .fillna(0)
 netflix['show_id'] = netflix['show_id'].astype('int64')
 netflix['duration'] = netflix['duration'].astype('int64')

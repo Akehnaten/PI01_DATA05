@@ -7,130 +7,134 @@ app = FastAPI()
 @app.get('/', response_class=HTMLResponse)
 async def mensaje():
 
-        bienvenida = """<html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Science - PI laboratorio número 1</title>
-        <script type="text/javascript">
-                function max_duration(){
-                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_max_duration(' + document.getElementById("anio").value + ', ' + document.getElementById("plataforma").value + ', ' + document.getElementById("unidad").value + ')'
-                window.open(url, '_blank');}
+        return """
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+                <title>Data Science - PI laboratorio número 1</title>                     
 
-                function count_plataform(){
-                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_count_plataform(' + document.getElementById("plataforma2").value + ')'
-                window.open(url, '_blank');}
+                <style>
+                        body {  background-color: #22272e;
+                                font-family: verdana;
+                                font-size: 75%;}
+                        h1   {  color: #cdd9e5;
+                                font-family: verdana;
+                                font-size: 250%;}
+                        h3   {  color: #539bf5;
+                                font-family: verdana;
+                                font-size: 100%;}
+                        p    {  color: #cdd9e5;
+                                font-family: verdana;
+                                font-size: 100%;}
+                        a    {  display: block;
+                                width: 130px;
+                                font-family: verdana
+                                font-weight: 700;
+                                background-color: #AD0306;
+                                border-radius:10px;
+                                color: #cdd9e5;
+                                text-decoration: none;
+                                margin: 15px 20px}
+                        a:hover {background-color: transparent;
+                                border: 2px solid #539bf5
+                                color: #539bf5}
+                </style>
+        </head>
 
-                function listedin(){
-                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_listedin(' + document.getElementById("genero").value + ')'
-                window.open(url, '_blank');}
-
-                function actor(){
-                        url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io:80/get_actor(' + document.getElementById("plataforma4").value + ', ' + document.getElementById("anio4").value + ')'
-                window.open(url, '_blank');}
-        </script>
-
-        <style>
-        body {  background-color: #22272e;
-                font-family: verdana;
-                font-size: 75%;}
-        h1   {  color: #cdd9e5;
-                font-family: verdana;
-                font-size: 250%;}
-        h3   {  color: #539bf5;
-                font-family: verdana;
-                font-size: 100%;}
-        p    {  color: #cdd9e5;
-                font-family: verdana;
-                font-size: 100%;}
-        a    {  display: block;
-                width: 130px;
-                font-family: verdana
-                font-weight: 700;
-                background-color: #AD0306;
-                border-radius:10px;
-                color: #cdd9e5;
-                text-decoration: none;
-                margin: 15px 20px}
-        a:hover {background-color: transparent;
-                border: 2px solid #539bf5
-                color: #539bf5}
-        </style>
-</head>
-<body>  
-        <h1><center>Data Science - PI laboratorio número 1 </center></h1>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        <p>Bienvenido a mi proyecto individual, soy Ronal Cabrera y aquí te enseñaré a navegar dentro del sitio:</p>
-        <br>
-        <p>• Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:</p>
-        <form>
-        <p>Año: <input type="text" name="año" id="anio" size="2" maxlength="4">
-        Plataforma:     <select name="plataforma" id="plataforma">
-                        <option>amazon_prime</option>
-                        <option>disney_plus</option>
-                        <option>hulu</option>
-                        <option>netflix</option>
-                        </select>
-        Medida de duración:     <select name="unidad" id="unidad">
-                                <option>min</option>
-                                <option>season</option>
+        <body>  
+                <h1><center>Data Science - PI laboratorio número 1 </center></h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>Bienvenido a mi proyecto individual, soy Ronal Cabrera y aquí te enseñaré a navegar dentro del sitio:</p>
+                <br>
+                <p>• Para buscar la película/serie de mayor duración dentro de la plataforma correspondiente:</p>
+                <form>
+                <p>Año: <input type="text" name="año" id="anio" size="2" maxlength="4">
+                Plataforma:     <select name="plataforma" id="plataforma">
+                                <option>amazon_prime</option>
+                                <option>disney_plus</option>
+                                <option>hulu</option>
+                                <option>netflix</option>
                                 </select>
-        </p>
-        </form>
-        <a href="" onclick="max_duration()" target="_blank"> <center> Get_max_duration </center> </a>
-        <h3>/get_max_duration(año, plataforma, [min/season según corresponda película/serie])</h3>
-        <h3> IMPORTANTE: usar espacio luego de cada coma!!!</h3>
-        <br>
-        <br>
-        
-        <p>• Para averiguar la cantidad de películas/series a disposición en cada plataforma:</p>
-        <form>
-        <p>Plataforma:  <select name="plataforma" id="plataforma2">
-                                <option>amazon_prime</option>
-                                <option>disney_plus</option>
-                                <option>hulu</option>
-                                <option>netflix</option>
-                        </select>
-        </p>
-        </form>
-        <a href="" onclick="count_plataform()" target="_blank"> <center> Get_count_plataform </center> </a>
-        <h3>/get_count_plataform(plataforma)</h3>
-        <br>
-        <br>
+                Medida de duración:     <select name="unidad" id="unidad">
+                                        <option>min</option>
+                                        <option>season</option>
+                                        </select>
+                </p>
+                </form>
+                <a href="" onclick="max_duration()" target="_blank"> <center> Get_max_duration </center> </a>
+                <h3>/get_max_duration(año, plataforma, [min/season según corresponda película/serie])</h3>
+                <h3> IMPORTANTE: usar espacio luego de cada coma!!!</h3>
+                <br>
+                <br>
+                
+                <p>• Para averiguar la cantidad de películas/series a disposición en cada plataforma:</p>
+                <form>
+                <p>Plataforma:  <select name="plataforma" id="plataforma2">
+                                        <option>amazon_prime</option>
+                                        <option>disney_plus</option>
+                                        <option>hulu</option>
+                                        <option>netflix</option>
+                                </select>
+                </p>
+                </form>
+                <a href="" onclick="count_plataform()" target="_blank"> <center> Get_count_plataform </center> </a>
+                <h3>/get_count_plataform(plataforma)</h3>
+                <br>
+                <br>
 
-        <p>• Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:</p>
-        <form>
-        <p>Género: <input type="text" name="genero" id="genero" size="10">
-        </p>
-        </form>
-        <a href="" onclick="listedin()" target="_blank"> <center>Get_listedin</center> </a>
-        <h3>/get_listedin(genero)</h3>
-        <h3>IMPORTANTE: recuerde que dentro de netflix el género comedia se encuentra como Comedies!!!</h3>
-        <br>
-        <br>
-        
-        <p>• Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:</p>
-        <form>
-        <p>Año: <input type="text" name="año" id="anio4" size="2" maxlength="4">
-        Plataforma:     <select name="plataforma" id="plataforma4">
-                                <option>amazon_prime</option>
-                                <option>disney_plus</option>
-                                <option>hulu</option>
-                                <option>netflix</option>
-                        </select>
-        </p>
-        </form>
-        <a href="" onclick="actor()" target="_blank"> <center>Get_actor</center> </a>
-        <h3>/get_actor(plataforma, año)</h3>
-        <h3>IMPORTANTE: usar espacio luego de cada coma!!!</h3>
+                <p>• Para ver cuantas veces se repite cierto género en los catálogos, y ver dentro de que plataforma hay mas variedad:</p>
 
-        """
-        return bienvenida
+                <form>
+                <p> Género: <input type="text" name="genero" id="genero" size="10"> </p>
+                </form>
+
+                <a href="" onclick="listedin()" target="_blank"> <center>Get_listedin</center> </a>
+                <h3>/get_listedin(genero)</h3>
+                <h3>IMPORTANTE: recuerde que dentro de netflix el género comedia se encuentra como Comedies!!!</h3>
+                <br>
+                <br>
+                
+                <p>• Para ver cual es el actor que mas podes encontrar dentro de la plataforma en cierto año:</p>
+                <form>
+                <p>Año: <input type="text" name="año" id="anio4" size="2" maxlength="4">
+                Plataforma:     <select name="plataforma" id="plataforma4">
+                                        <option>amazon_prime</option>
+                                        <option>disney_plus</option>
+                                        <option>hulu</option>
+                                        <option>netflix</option>
+                                </select>
+                </p>
+                </form>
+                <a href="" onclick="actor()" target="_blank"> <center>Get_actor</center> </a>
+                <h3>/get_actor(plataforma, año)</h3>
+                <h3>IMPORTANTE: usar espacio luego de cada coma!!!</h3>
+               
+                <script type="text/javascript">
+                        function max_duration(){
+                                url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io/get_max_duration(' + document.getElementById("anio").value + ', ' + document.getElementById("plataforma").value + ', ' + document.getElementById("unidad").value + ')'
+                        window.open(url, '_blank');}
+
+                        function count_plataform(){
+                                url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io/get_count_plataform(' + document.getElementById("plataforma2").value + ')'
+                        window.open(url, '_blank');}
+
+                        function listedin(){
+                                url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io/get_listedin(' + document.getElementById("genero").value + ')'
+                        window.open(url, '_blank');}
+
+                        function actor(){
+                                url = 'http://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io/get_actor(' + document.getElementById("plataforma4").value + ', ' + document.getElementById("anio4").value + ')'
+                        window.open(url, '_blank');}
+                </script>
+
+        </body>
+</html>"""        
 
 @app.get("/get_max_duration({anio}, {plataforma}, {tipo})")
 async def duracion(anio:int, plataforma:str, tipo:str):
