@@ -7,7 +7,11 @@ app = FastAPI()
 
 @app.get('/', response_class=HTMLResponse)
 async def mensaje():
-
+        bucle=1
+        if bucle==1:
+                test
+                bucle-=1
+        
         return """
 <html lang="en">
         <head>
@@ -166,7 +170,6 @@ async def duracion(anio:int, plataforma:str, tipo:str):
                 elif plataforma == 'netflix':
                         resultado = netflix[(netflix['type'] == 'Movie') & (netflix['release_year'] == anio)]['duration'].max()                   
 
-        test
         return f"La duración máxima fue de {resultado} {unidad}, en el año {anio} mediante la plataforma {plataforma}."
 
 @app.get("/get_count_plataform({plataforma})")
