@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get('/', response_class=HTMLResponse)
 async def mensaje():
-
+        tabla = test.crear_tabla()
         return """
 <html lang="en">
         <head>
