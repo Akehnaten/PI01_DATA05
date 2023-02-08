@@ -39,7 +39,7 @@ Utilizando FastAPI, se diseña el home en un ambiente HTML para facilitar las co
 
 4. Deployment en Mogenius
 
-https://pi01-data05-prod-akenahten-lub9dl.mo4.mogenius.io
+https://pi01-prod-labhenry-rj0v5w.mo6.mogenius.io/
 <br>
 <p align=left>
 <img src = 'src/mogenius.jpg' height=200></p>
